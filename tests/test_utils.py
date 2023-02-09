@@ -1,4 +1,4 @@
-from ..pandas.utils import file_ext
+from ..himan.pandas.utils import file_ext
 from pathlib import Path, PurePath
 
 

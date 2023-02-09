@@ -1,4 +1,4 @@
-from ..pandas.utils import load_file
+from ..himan.pandas.utils import load_file
 from pathlib import Path, PurePath
 
 

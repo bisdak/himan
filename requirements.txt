@@ -1,3 +1,6 @@
 pytest
 pandas
 openpyxl
+
+twine
+wheel
