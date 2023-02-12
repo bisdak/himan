@@ -3,7 +3,7 @@ from typing import List
 
 
 
-def load_file(filepath, header=0):
+def load_file(filepath, header=0, as_dataframe=False):
     '''It should load any kind of file formats'''
 
     ext = file_ext(filepath)
@@ -15,9 +15,11 @@ def load_file(filepath, header=0):
     else:
         print("Invalid file format")
         return None
+    
+    if as_dataframe:
+        return df
 
     return df.to_dict('list')
-
 
 def write(filepath, items: List[dict], mode='w'):
     header = True

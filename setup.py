@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='himan',
-      version='0.0.3',
+      version='0.0.4',
       description='Python helper utilities',
       author='Kristian Marlowe Ole',
       author_email='krismar.ole@gmail.com',
