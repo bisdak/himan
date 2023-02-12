@@ -9,7 +9,7 @@ def load_file(filepath, header=0, as_dataframe=False):
     ext = file_ext(filepath)
 
     if ext == 'csv':
-        df = pd.read_csv(filepath, header=header)
+        df = pd.read_csv(filepath, encoding='utf-8', header=header)
     elif ext in ['xlsx', 'xls']:
         df = pd.read_excel(filepath, header=header)
     else:
