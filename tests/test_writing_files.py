@@ -27,7 +27,6 @@ def test_should_write_csv_file():
 
     os.remove(filename)
 
-
 def test_should_append_csv_file():
     filename = get_path('sample_01.csv')
 
@@ -55,3 +54,16 @@ def test_should_append_csv_file():
 
     os.remove(filename)
 
+
+def test_should_write_from_dataframe():
+    input = get_path('sample.csv')
+    output = get_path('sample_1.csv')
+
+    item = load_file(input, as_dataframe=True)
+    write(output, item)
+
+    item = load_file(output)
+    assert len(item['name']) == 2
+    print(item)
+
+    os.remove(output)
